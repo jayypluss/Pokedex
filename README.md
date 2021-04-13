@@ -12,12 +12,7 @@ Foi utilizado o framework [React Native](https://reactnative.dev) o desenvolvime
 Para buildar a aplicação, basta ter o [*npm*](https://www.npmjs.com/) e o [*node*](https://nodejs.org/en/) instalados e rodar `npm install` (para versões 7+ do npm, talvez seja necessário rodar `npm install --legacy-peer-deps`).
 
 
-### Build
-
-Para buildar a aplicação, basta rodar `npm install`.
-
-
-### Run
+### Build & Run
 
 Para rodar em um emulador Android ou num dispositivo conectado via adb em modo debug, por exemplo, basta possuir o ambiente configurado para tal (emulador instalado, Android SDK, adb, etc.), e conectar o dispositivo ou abrir o emulador. 
 Para verificar se o dispositivo está conectado via adb, basta `adb devices`. O identificador do dispositivo deve ser listado no output do comando.
