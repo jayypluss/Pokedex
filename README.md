@@ -21,3 +21,8 @@ Para rodar a aplicação, basta rodar `npm start` (o que é equivalente a rodar 
 Isso irá rodar um server do Metro Bundler localmente.
 
 Com o server rodando, abra uma outra sessão do terminal e rode o comando `npm run android` (que é o equivalente a rodar `react-native run-android`) para rodar o app no dispositivo conectado.
+
+
+### Considerações
+
+Considerei utilizar um manejador de estados com o Redux, porém devido à baixa complexidade do app, decidi não utilizar enquanto.
