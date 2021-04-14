@@ -2,18 +2,33 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        padding: 30,
+        padding: 25,
         backgroundColor: '#d6283a',
+        flexDirection: 'row',
+    },
+
+    backButton: {
+        width: 30,
+        height: 30,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    backButtonIcon: {
+        width: 20,
+        height: 20
     },
 
     topBar: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        flex: 1
     },
 
     header: {
-      alignItems: 'center'
+      alignItems: 'center',
+      flex: 100
     },
 
     title: {

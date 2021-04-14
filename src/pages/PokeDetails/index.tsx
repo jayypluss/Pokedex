@@ -35,7 +35,12 @@ function PokeDetails({ route }: any) {
                   style={styles.image}
               />
 
-              <View style={[ styles.infoContainer, { flexDirection: 'row' } ]}>
+
+              <View style={[ styles.infoContainer, { marginBottom: 0 } ]}>
+                <Text style={styles.id}># {pokemon.id?.padStart(3, "0")}</Text>
+              </View>
+
+              <View style={[ styles.infoContainer, { flexDirection: 'row', marginTop: 5} ]}>
                 <Text style={styles.sectionTitle}>NAME:</Text>
                 <Text style={styles.name}>{pokemon.name.toUpperCase()}</Text>
               </View>

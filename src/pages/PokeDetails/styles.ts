@@ -43,6 +43,10 @@ const styles = StyleSheet.create({
         marginVertical: 15
     },
 
+    id: {
+        color: '#5d566d',
+    },
+
     sectionTitle: {
         fontSize: 18,
         fontWeight: 'bold',

@@ -30,7 +30,7 @@ const PokemonItem: React.FC<PokemonItemProps> = ({ pokemon, navigation }) => {
         >
             
             <View>
-                <Text style={styles.id}># {pokemon.id}</Text>
+                <Text style={styles.id}># {pokemon.id?.padStart(3, "0")}</Text>
             </View>
 
             <View>

@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     id: {
         // fontFamily: 'Archivo_700Bold',
         color: '#5d566d',
-        fontSize: 14,
         paddingTop: 10,
     },
     
