@@ -25,4 +25,9 @@ Com o server rodando, abra uma outra sessão do terminal e rode o comando `npm r
 
 ### Considerações
 
-Considerei utilizar um manejador de estados com o Redux, porém devido à baixa complexidade do app, decidi não utilizar enquanto.
+Ao implementar o Pokédex, algumas decisões de projetos foram tomadas para melhorar a usabilidade e código do projeto, como por exemplo:
+
+- Foi considerado utilizar um manejador de estados, como o Redux, por exemplo, porém devido à baixa complexidade do app, foi decidido não utilizar enquanto.
+
+- Na tela de listagem de Pokemóns, foi decidido já requisitar os detalhamentos do Pokemón juntamente na lista, para poder exibir o tipo do Pokemón já na nesta tela, e para que o tempo de resposta não ficasse muito grande foi decidido fazer a paginação, utilizando um Infinite Scroll trazendo de 6 em 6 resultados, à medida em que o usuário desce na lista. 
+Um outro ponto positivo disso é que o tempo de resposta para abrir a página de detalhe do Pokemón vai ser menor, pois os dados já são carregados previamente.
