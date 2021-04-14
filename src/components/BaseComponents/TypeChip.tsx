@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         marginBottom: 10,
         marginHorizontal: 6, 
-        textAlign: 'center',
+        textAlign: 'center'
     },
     typeName: {
         color: '#fff',
         fontSize: 12,
-        fontWeight: 'bold',
-    },
+        fontWeight: 'bold'
+    }
 });
 
 export default TypeChip;

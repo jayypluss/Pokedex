@@ -28,6 +28,10 @@ const PokemonItem: React.FC<PokemonItemProps> = ({ pokemon, navigation }) => {
             style={styles.container}
             onPress={navigateToPokeDetail}
         >
+            
+            <View>
+                <Text style={styles.id}># {pokemon.id}</Text>
+            </View>
 
             <View>
                 <Text style={styles.name}>{pokemon.name.toUpperCase()}</Text>

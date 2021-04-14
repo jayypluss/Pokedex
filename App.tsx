@@ -8,7 +8,7 @@
  * @format
  */
 
- import React from 'react';
+ import React, { useEffect } from 'react';
  import {
    SafeAreaView,
    ScrollView,
@@ -27,6 +27,7 @@
    ReloadInstructions,
  } from 'react-native/Libraries/NewAppScreen';
 import AppStack from './src/routes/AppStack';
+import SplashScreen from 'react-native-splash-screen'
 
  const App = () => {
    const isDarkMode = useColorScheme() === 'dark';
@@ -34,6 +35,10 @@ import AppStack from './src/routes/AppStack';
    const backgroundStyle = {
      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
    };
+
+   useEffect(() => {
+    SplashScreen.hide();
+   }, []);
 
    return (
      <>

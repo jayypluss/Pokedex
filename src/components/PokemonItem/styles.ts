@@ -23,11 +23,17 @@ const styles = StyleSheet.create({
         elevation: 9,
     },
     
+    id: {
+        // fontFamily: 'Archivo_700Bold',
+        color: '#5d566d',
+        fontSize: 14,
+        paddingTop: 10,
+    },
+    
     name: {
         // fontFamily: 'Archivo_700Bold',
         color: '#32264d',
         fontSize: 20,
-        paddingTop: 20,
     },
     
     image: {
