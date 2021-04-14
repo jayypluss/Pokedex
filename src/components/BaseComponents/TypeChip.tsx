@@ -31,7 +31,7 @@ function TypeChip(props: Props) {
     const typeColor = typeColors[name] || '#000';
 
     return (
-        <View style={[styles.container, { backgroundColor: typeColor, marginRight: 2 }]}>
+        <View style={[styles.container, { backgroundColor: typeColor }]}>
             <Text style={styles.typeName}>{name.toUpperCase()}</Text>
         </View>
     );
@@ -43,14 +43,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: 30,
+        maxHeight: 30,
         width: 80,
-        borderRadius: 60,
-        marginBottom: 20,
+        maxWidth: 100,
+        borderRadius: 20,
+        marginBottom: 10,
+        marginHorizontal: 6, 
         textAlign: 'center',
     },
     typeName: {
         color: '#fff',
-        fontSize: 10,
+        fontSize: 12,
         fontWeight: 'bold',
     },
 });

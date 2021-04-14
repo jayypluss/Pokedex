@@ -12,6 +12,7 @@ import TypeChip from '../../components/BaseComponents/TypeChip';
 
 // models
 import { PokemonAbilityItem } from '../../models/Ability';
+import { PokemonStatItem } from '../../models/Stat';
 
 
 function PokeDetails({ route }: any) {
@@ -24,8 +25,8 @@ function PokeDetails({ route }: any) {
           <ScrollView
             style={styles.pokemonDetails}
             contentContainerStyle={{ 
-              paddingHorizontal: 16,
-              paddingBottom: 24,
+              paddingHorizontal: 12,
+              paddingBottom: 20,
             }}
           >
             <View style={styles.pokemonContainer}>
@@ -34,45 +35,90 @@ function PokeDetails({ route }: any) {
                   style={styles.image}
               />
 
-              <View style={styles.overviewContainer}>
-                <View style={styles.overviewLine}>
-                  <Text style={styles.overviewTitle}>NAME:</Text>
-                  <Text style={styles.overviewName}>{pokemon.name.toUpperCase()}</Text>
-                </View>
-
-                <View style={styles.overviewLine}>
-                  <Text style={styles.overviewTitle}>TYPES:</Text>
-                  
-                  { pokemon.types.map((pokemonType: any) => {
-                      return(
-                        <React.Fragment 
-                        key={pokemonType.type.name}
-                        >
-                        <TypeChip
-                            name={pokemonType.type.name}
-                        />
-                        </React.Fragment>
-                      );
-                    })}
-                </View>
+              <View style={[ styles.infoContainer, { flexDirection: 'row' } ]}>
+                <Text style={styles.sectionTitle}>NAME:</Text>
+                <Text style={styles.name}>{pokemon.name.toUpperCase()}</Text>
               </View>
 
-              <View style={styles.abilitiesContainer}>
-                <Text style={styles.abilitiesTitle}>{"Abilites".toUpperCase()}</Text>
-                <Divider style={styles.divider} />
+
+              {/* DIVIDER */}
+              <Divider style={styles.divider} />
+
+              <View style={[ styles.infoContainer, { marginHorizontal: 20 } ]}>
+                <Text style={styles.sectionTitle}>TYPES</Text>
                 
-                { pokemon.abilities.map((pokemonAbilityItem: PokemonAbilityItem) => {
+                <View style={[styles.typesListContainer]}>
+                  { pokemon.types.map((pokemonType: any) => {
+                    return(
+                      <React.Fragment 
+                      key={pokemonType.type.name}
+                      >
+                      <TypeChip
+                          name={pokemonType.type.name}
+                      />
+                      </React.Fragment>
+                    );
+                  })}
+                </View>
+              </View>
+              
+
+              {/* DIVIDER */}
+              <Divider style={styles.divider} />
+
+              <View style={[ styles.infoContainer, { flexDirection: 'row' } ]}>
+                <Text style={[ styles.sectionTitle, { fontSize: 16 } ]}>HEIGHT:</Text>
+                <Text style={[ styles.name, { fontSize: 14 } ]}>{(pokemon.height * 0.1).toFixed(2)} m</Text>
+
+                <Text style={[ styles.inlineDivider ]}>|</Text>
+
+                <Text style={[ styles.sectionTitle, { fontSize: 16 } ]}>WEIGHT:</Text>
+                <Text style={[ styles.name, { fontSize: 14 } ]}>{(pokemon.weight*0.1).toFixed(2)} kg</Text>
+              </View>
+
+
+              {/* DIVIDER */}
+              <Divider style={styles.divider} />
+              
+              <View style={styles.infoContainer}>
+                <Text style={styles.sectionTitle}>ABILITIES</Text>
+
+                { pokemon.abilities.map((item: PokemonAbilityItem) => {
                   return (
                     <React.Fragment
-                      key={pokemonAbilityItem.ability.name}
+                      key={item.ability.name}
                     >
                       <View>
-                        <Text style={styles.abilityName}>{pokemonAbilityItem.ability.name.toUpperCase()}</Text>
+                        <Text style={styles.abilityName}>{item.ability.name.toUpperCase()}</Text>
                       </View>
                     </React.Fragment>
                   )
                 }) }
               </View>
+
+
+              {/* DIVIDER */}
+              <Divider style={styles.divider} />
+
+              <View style={[styles.infoContainer, styles.statsContainer]}>
+                <Text style={styles.sectionTitle}>STATS</Text>
+
+                <View style={styles.statListContainer}>
+                  { pokemon.stats.map((item: PokemonStatItem) => {
+                    return (
+                      <React.Fragment 
+                        key={item.stat.name}
+                      >
+                        <View style={styles.statContainer}>
+                          <Text style={styles.statName}>{item.stat.name.toUpperCase()}: </Text>
+                          <Text style={styles.statValue}>{item.base_stat}</Text>
+                        </View>
+                      </React.Fragment>
+                    )
+                  }) }
+                </View>
+              </View>
+
             </View>
           </ScrollView>
       </View>  

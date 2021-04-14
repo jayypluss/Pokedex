@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     },
 
     pokemonContainer: {
-        height: 630,
         backgroundColor: '#fff',
         borderWidth: 1,
         borderColor: '#e6e6f0',
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.32,
         shadowRadius: 5.46,
 
-        elevation: 9,
+        elevation: 9
     },
 
     pokemonDetails: {
@@ -37,50 +36,74 @@ const styles = StyleSheet.create({
 
     image: {
         width: 300,
-        height: 300,
+        height: 300
     },
 
-    overviewContainer: {
-        marginBottom: 15,
+    infoContainer: {
+        marginVertical: 15
     },
 
-    overviewLine: {
-        flexDirection: 'row',
-    },
-
-    overviewTitle: {
+    sectionTitle: {
         fontSize: 18,
         fontWeight: 'bold',
-        marginBottom: 15,
+        marginBottom: 10,
         marginRight: 10,
+        textAlign: 'center'
     },
 
-    overviewName: {
+    name: {
         fontSize: 18,
-        fontWeight: 'normal',
-    },
-
-    abilitiesContainer: {
-        flex: 1,
-    },
-
-    abilitiesTitle: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginBottom: 5,
-        textAlign: 'center',
+        fontWeight: 'normal'
     },
 
     divider: {
         marginBottom: 10,
         width: 300,
+        height: 1
+    },
+
+    typesListContainer: {
+        width: '100%',
+        flexDirection: 'row',
     },
 
     abilityName: {
         textAlign: 'center',
         fontSize: 18,
         fontWeight: 'normal',
-        marginVertical: 5,
+        marginVertical: 5
+    },
+
+    inlineDivider: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        marginHorizontal: 16
+    },
+
+    statsContainer: {
+        width: '100%',
+        flexDirection: 'column'
+    },
+
+    statListContainer: {
+        marginHorizontal: 55
+    },
+
+    statContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+
+    statName: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginVertical: 5
+    },
+
+    statValue: {
+        fontSize: 16,
+        fontWeight: 'normal',
+        marginVertical: 5
     },
 })
 

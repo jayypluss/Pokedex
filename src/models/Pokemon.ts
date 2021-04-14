@@ -3,6 +3,9 @@ export interface Pokemon {
     name: string;
     url: string;
     spriteUrl: string;
+    height: number;
+    weight: number;
+    stats: any[];
     types: any[];
     abilities: any[];
 }

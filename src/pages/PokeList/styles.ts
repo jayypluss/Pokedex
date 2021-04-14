@@ -8,6 +8,14 @@ const styles = StyleSheet.create({
 
     pokemonsList: {
         marginTop: 20
+    },
+
+    footer: {
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        margin: 15
     }
 })
 
