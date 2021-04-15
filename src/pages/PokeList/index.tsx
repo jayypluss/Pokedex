@@ -49,12 +49,13 @@ function PokeList({navigation}: any) {
     }
   }
 
-  // Unmount components
+  // Unmounts components
   useEffect(() => {}, []);
 
+  // Loads Pokemons on Page mount
   useEffect(() => {
     loadPokemons();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Renders Pokemon card item
   const renderItem = ({item}: any) => {
