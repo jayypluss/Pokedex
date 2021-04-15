@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   install-and-test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
       - name: Install npm dependencies
@@ -13,7 +13,7 @@ jobs:
           npm install
   build-android:
     needs: install-and-test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps: 
       - uses: actions/checkout@v2
       - name: Install npm dependencies
