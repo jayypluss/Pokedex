@@ -2,7 +2,7 @@
 
 Simples app de Pokedex (catálogo de Pokemóns) que consome dados da api do [pokeapi.co](pokeapi.co/) para exibir uma lista de Pokemóns e alguns de seus detalhes. 
 
-![Pokemon List](docs/assets/poke-list.png "Pokemon List") ![Pokemon Details](docs/assets/poke-details.png "Pokemon Details") 
+![Pokedex](docs/assets/pokedex.gif "Pokedex") 
 
 Foi utilizado o framework [React Native](https://reactnative.dev) o desenvolvimento do app.
 
