@@ -1,61 +1,61 @@
 // libraries
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 interface Props {
-    name: string,
+  name: string;
 }
 
 function TypeChip(props: Props) {
-    const { name } = props;
+  const {name} = props;
 
-    const typeColors: {[key: string]: string} = {
-        "bug": "#789c5f",
-        "electric": "#d9e317",
-        "fairy": "#e38fc4",
-        "fighting": "#ffa600",
-        "fire": "#d42215",
-        "flying": "#edc67e",
-        "ghost": "#5808c9",
-        "grass": "#15d445",
-        "ground": "#ab9a85",
-        "ice": "#7bd4ed",
-        "normal": "#9e9e9e",
-        "psychic": "#85d4ce",
-        "poison": "#9e15d4",
-        "rock": "#574632",
-        "steel": "#575555",
-        "water": "#2f66d4",
-    }
+  const typeColors: {[key: string]: string} = {
+    bug: '#789c5f',
+    electric: '#d9e317',
+    fairy: '#e38fc4',
+    fighting: '#ffa600',
+    fire: '#d42215',
+    flying: '#edc67e',
+    ghost: '#5808c9',
+    grass: '#15d445',
+    ground: '#ab9a85',
+    ice: '#7bd4ed',
+    normal: '#9e9e9e',
+    psychic: '#85d4ce',
+    poison: '#9e15d4',
+    rock: '#574632',
+    steel: '#575555',
+    water: '#2f66d4',
+  };
 
-    const typeColor = typeColors[name] || '#000';
+  const typeColor = typeColors[name] || '#000';
 
-    return (
-        <View style={[styles.container, { backgroundColor: typeColor }]}>
-            <Text style={styles.typeName}>{name.toUpperCase()}</Text>
-        </View>
-    );
+  return (
+    <View style={[styles.container, {backgroundColor: typeColor}]}>
+      <Text style={styles.typeName}>{name.toUpperCase()}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: 30,
-        maxHeight: 30,
-        width: 80,
-        maxWidth: 100,
-        borderRadius: 20,
-        marginBottom: 10,
-        marginHorizontal: 6, 
-        textAlign: 'center'
-    },
-    typeName: {
-        color: '#fff',
-        fontSize: 12,
-        fontWeight: 'bold'
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 30,
+    maxHeight: 30,
+    width: 80,
+    maxWidth: 100,
+    borderRadius: 20,
+    marginBottom: 10,
+    marginHorizontal: 6,
+    textAlign: 'center',
+  },
+  typeName: {
+    color: '#fff',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
 });
 
 export default TypeChip;

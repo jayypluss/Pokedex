@@ -1,114 +1,144 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-    header: {
-        height: '100px'
+  header: {
+    height: '100px',
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: '#f0f0f7',
+  },
+
+  contentContainerStyle: {
+    paddingHorizontal: 12,
+    paddingBottom: 20,
+  },
+
+  numberContainer: {
+    marginBottom: 0,
+  },
+
+  nameContainer: {
+    flexDirection: 'row',
+    marginTop: 5,
+  },
+
+  typesContainer: {
+    marginHorizontal: 20,
+  },
+
+  massAndHeightSpecsContainer: {
+    flexDirection: 'row',
+  },
+
+  littleTitle: {
+    fontSize: 16,
+  },
+
+  littleValue: {
+    fontSize: 14,
+  },
+
+  pokemonContainer: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#e6e6f0',
+    borderRadius: 16,
+    overflow: 'hidden',
+    alignItems: 'center',
+
+    //card shadow
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
     },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
 
-    container: {
-        flex: 1,
-        backgroundColor: '#f0f0f7'
-    },
+    elevation: 9,
+  },
 
-    pokemonContainer: {
-        backgroundColor: '#fff',
-        borderWidth: 1,
-        borderColor: '#e6e6f0',
-        borderRadius: 16,
-        overflow: 'hidden',
-        alignItems: 'center',
+  pokemonDetails: {
+    marginTop: 10,
+  },
 
-        //card shadow
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 4,
-        },
-        shadowOpacity: 0.32,
-        shadowRadius: 5.46,
+  image: {
+    width: 300,
+    height: 300,
+  },
 
-        elevation: 9
-    },
+  infoContainer: {
+    marginVertical: 15,
+  },
 
-    pokemonDetails: {
-        marginTop: 10
-    },
+  id: {
+    color: '#5d566d',
+  },
 
-    image: {
-        width: 300,
-        height: 300
-    },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    marginRight: 10,
+    textAlign: 'center',
+  },
 
-    infoContainer: {
-        marginVertical: 15
-    },
+  name: {
+    fontSize: 18,
+    fontWeight: 'normal',
+  },
 
-    id: {
-        color: '#5d566d',
-    },
+  divider: {
+    marginBottom: 10,
+    width: 300,
+    height: 1,
+  },
 
-    sectionTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 10,
-        marginRight: 10,
-        textAlign: 'center'
-    },
+  typesListContainer: {
+    width: '100%',
+    flexDirection: 'row',
+  },
 
-    name: {
-        fontSize: 18,
-        fontWeight: 'normal'
-    },
+  abilityName: {
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'normal',
+    marginVertical: 5,
+  },
 
-    divider: {
-        marginBottom: 10,
-        width: 300,
-        height: 1
-    },
+  inlineDivider: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginHorizontal: 16,
+  },
 
-    typesListContainer: {
-        width: '100%',
-        flexDirection: 'row',
-    },
+  statsContainer: {
+    width: '100%',
+    flexDirection: 'column',
+  },
 
-    abilityName: {
-        textAlign: 'center',
-        fontSize: 18,
-        fontWeight: 'normal',
-        marginVertical: 5
-    },
+  statListContainer: {
+    marginHorizontal: 55,
+  },
 
-    inlineDivider: {
-        fontWeight: 'bold',
-        fontSize: 16,
-        marginHorizontal: 16
-    },
+  statContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 
-    statsContainer: {
-        width: '100%',
-        flexDirection: 'column'
-    },
+  statName: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginVertical: 5,
+  },
 
-    statListContainer: {
-        marginHorizontal: 55
-    },
-
-    statContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-
-    statName: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginVertical: 5
-    },
-
-    statValue: {
-        fontSize: 16,
-        fontWeight: 'normal',
-        marginVertical: 5
-    },
-})
+  statValue: {
+    fontSize: 16,
+    fontWeight: 'normal',
+    marginVertical: 5,
+  },
+});
 
 export default styles;

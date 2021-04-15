@@ -1,8 +1,8 @@
 export interface PokemonAbilityItem {
-    ability: Ability;
+  ability: Ability;
 }
-  
+
 export interface Ability {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }

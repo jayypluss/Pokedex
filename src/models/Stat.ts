@@ -1,9 +1,9 @@
 export interface PokemonStatItem {
-    stat: Stat;
-    base_stat: number;
+  stat: Stat;
+  base_stat: number;
 }
-  
+
 export interface Stat {
-    name: string;
-    url: string;
+  name: string;
+  url: string;
 }

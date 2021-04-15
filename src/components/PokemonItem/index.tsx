@@ -1,57 +1,48 @@
 // libraries
-import React, { memo } from 'react';
-import { View, Image, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React, {memo} from 'react';
+import {View, Image, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 // js
-import styles from './styles'
+import styles from './styles';
 
 // components
 import TypeChip from '../BaseComponents/TypeChip';
 
 // models
-import { Pokemon } from '../../models/Pokemon';
+import {Pokemon} from '../../models/Pokemon';
 
 export interface PokemonItemProps {
-    pokemon: Pokemon;
-    navigation: any;
+  pokemon: Pokemon;
+  navigation: any;
 }
 
-const PokemonItem: React.FC<PokemonItemProps> = ({ pokemon, navigation }) => {
+const PokemonItem: React.FC<PokemonItemProps> = ({pokemon, navigation}) => {
+  function navigateToPokeDetail() {
+    navigation.navigate('PokeDetails', {pokemon});
+  }
 
-    function navigateToPokeDetail() {
-        navigation.navigate('PokeDetails', { pokemon })
-    }
+  return (
+    <TouchableOpacity style={styles.container} onPress={navigateToPokeDetail}>
+      <View>
+        <Text style={styles.id}># {pokemon.id?.padStart(3, '0')}</Text>
+      </View>
 
-    return (
-        <TouchableOpacity 
-            style={styles.container}
-            onPress={navigateToPokeDetail}
-        >
-            
-            <View>
-                <Text style={styles.id}># {pokemon.id?.padStart(3, "0")}</Text>
-            </View>
+      <View>
+        <Text style={styles.name}>{pokemon.name.toUpperCase()}</Text>
+      </View>
 
-            <View>
-                <Text style={styles.name}>{pokemon.name.toUpperCase()}</Text>
-            </View>
+      <Image source={{uri: pokemon.spriteUrl}} style={styles.image} />
 
-            <Image source={{ uri: pokemon.spriteUrl }} style={styles.image} />
-
-            { pokemon.types.map((pokemonType: any) => {
-              return (
-                <React.Fragment 
-                    key={pokemonType.type.name}
-                >
-                    <TypeChip 
-                        name={pokemonType.type.name}
-                    />
-                </React.Fragment>
-              )
-            }) }
-        </TouchableOpacity>  
-    )
-}
+      {pokemon.types.map((pokemonType: any) => {
+        return (
+          <React.Fragment key={pokemonType.type.name}>
+            <TypeChip name={pokemonType.type.name} />
+          </React.Fragment>
+        );
+      })}
+    </TouchableOpacity>
+  );
+};
 
 export default memo(PokemonItem);
