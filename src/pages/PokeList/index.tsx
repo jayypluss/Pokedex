@@ -10,10 +10,13 @@ import api from '../../services/api';
 import PageHeader from '../../components/PageHeader';
 import PokemonItem from '../../components/PokemonItem';
 
+
+// Pokemons List Page
 function PokeList({ navigation } : any) {
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
 
+  // Loads next 6 pokemons to concatenate on current pokemon array 
   async function loadPokemons() {
     try {
       if (!loading) {
@@ -43,6 +46,7 @@ function PokeList({ navigation } : any) {
     }
   }
 
+  // Unmount components
   useEffect(() => {
   }, []);
 
@@ -50,6 +54,7 @@ function PokeList({ navigation } : any) {
     loadPokemons();
   }, [])
 
+  // Renders Pokemon card item
   const renderItem = ({ item }: any) => {
     return (
       <PokemonItem 
@@ -60,6 +65,7 @@ function PokeList({ navigation } : any) {
     )
   }
 
+  // Renders "loading" footer when items are loading
   const renderFooter = () => {
     return (
       <View style={styles.footer}>
