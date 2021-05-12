@@ -24,7 +24,10 @@ const App = () => {
   return (
     <>
       <AppStack />
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar
+        backgroundColor={'#d6283a'}
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      />
     </>
   );
 };

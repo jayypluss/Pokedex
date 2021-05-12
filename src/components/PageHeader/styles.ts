@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    padding: 25,
+    padding: 20,
     backgroundColor: '#d6283a',
     flexDirection: 'row',
   },
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   title: {
     // fontFamily: 'Archivo_700Bold',
     color: '#FFF',
-    fontSize: 24,
+    fontSize: 26,
     lineHeight: 32,
     textAlign: 'center',
   },
